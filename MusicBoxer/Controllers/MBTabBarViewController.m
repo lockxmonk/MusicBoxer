@@ -24,10 +24,10 @@
     UINavigationController *nv2 =[[UINavigationController alloc] initWithRootViewController:vc2];
 //    nv1.navigationItem.title = @"Music";
 //    nv2.navigationItem.title = @"Setting";
-    nv1.tabBarItem.title=@"音乐";
-    vc1.title = @"音乐";
-    nv2.tabBarItem.title=@"设置";
-    vc2.title = @"设置";
+    nv1.tabBarItem.title=@"音 乐";
+    vc1.title = @"音 乐";
+    nv2.tabBarItem.title=@"设 置";
+    vc2.title = @"设 置";
     //UITabBarController *tab = [[UITabBarController alloc] init];
     self.viewControllers = @[nv1,nv2];
     self.delegate = self;
