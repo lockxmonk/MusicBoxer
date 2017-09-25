@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E5310361F78EC4000651D3B /* MBTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5310351F78EC4000651D3B /* MBTabBarViewController.m */; };
+		5E5310391F78EFED00651D3B /* MBfirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5310381F78EFED00651D3B /* MBfirstViewController.m */; };
+		5E53103C1F78F00300651D3B /* MBsecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E53103B1F78F00300651D3B /* MBsecondViewController.m */; };
 		5EEA19CC1F752A04004A4A25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA19CB1F752A04004A4A25 /* AppDelegate.m */; };
-		5EEA19CF1F752A04004A4A25 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA19CE1F752A04004A4A25 /* ViewController.m */; };
-		5EEA19D21F752A04004A4A25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEA19D01F752A04004A4A25 /* Main.storyboard */; };
 		5EEA19D51F752A04004A4A25 /* MusicBoxer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA19D31F752A04004A4A25 /* MusicBoxer.xcdatamodeld */; };
 		5EEA19D71F752A04004A4A25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EEA19D61F752A04004A4A25 /* Assets.xcassets */; };
 		5EEA19DA1F752A04004A4A25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEA19D81F752A04004A4A25 /* LaunchScreen.storyboard */; };
@@ -36,12 +37,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E5310341F78EC4000651D3B /* MBTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBTabBarViewController.h; sourceTree = "<group>"; };
+		5E5310351F78EC4000651D3B /* MBTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBTabBarViewController.m; sourceTree = "<group>"; };
+		5E5310371F78EFED00651D3B /* MBfirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBfirstViewController.h; sourceTree = "<group>"; };
+		5E5310381F78EFED00651D3B /* MBfirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBfirstViewController.m; sourceTree = "<group>"; };
+		5E53103A1F78F00300651D3B /* MBsecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBsecondViewController.h; sourceTree = "<group>"; };
+		5E53103B1F78F00300651D3B /* MBsecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBsecondViewController.m; sourceTree = "<group>"; };
 		5EEA19C71F752A04004A4A25 /* MusicBoxer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicBoxer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EEA19CA1F752A04004A4A25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5EEA19CB1F752A04004A4A25 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5EEA19CD1F752A04004A4A25 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5EEA19CE1F752A04004A4A25 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5EEA19D11F752A04004A4A25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EEA19D41F752A04004A4A25 /* MusicBoxer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MusicBoxer.xcdatamodel; sourceTree = "<group>"; };
 		5EEA19D61F752A04004A4A25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EEA19D91F752A04004A4A25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,6 +84,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E5310321F78EB2300651D3B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5E5310341F78EC4000651D3B /* MBTabBarViewController.h */,
+				5E5310351F78EC4000651D3B /* MBTabBarViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5E5310331F78EB2F00651D3B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5E5310371F78EFED00651D3B /* MBfirstViewController.h */,
+				5E5310381F78EFED00651D3B /* MBfirstViewController.m */,
+				5E53103A1F78F00300651D3B /* MBsecondViewController.h */,
+				5E53103B1F78F00300651D3B /* MBsecondViewController.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5EEA19BE1F752A04004A4A25 = {
 			isa = PBXGroup;
 			children = (
@@ -105,9 +129,8 @@
 			children = (
 				5EEA19CA1F752A04004A4A25 /* AppDelegate.h */,
 				5EEA19CB1F752A04004A4A25 /* AppDelegate.m */,
-				5EEA19CD1F752A04004A4A25 /* ViewController.h */,
-				5EEA19CE1F752A04004A4A25 /* ViewController.m */,
-				5EEA19D01F752A04004A4A25 /* Main.storyboard */,
+				5E5310321F78EB2300651D3B /* Controllers */,
+				5E5310331F78EB2F00651D3B /* Views */,
 				5EEA19D61F752A04004A4A25 /* Assets.xcassets */,
 				5EEA19D81F752A04004A4A25 /* LaunchScreen.storyboard */,
 				5EEA19DB1F752A04004A4A25 /* Info.plist */,
@@ -243,7 +266,6 @@
 			files = (
 				5EEA19DA1F752A04004A4A25 /* LaunchScreen.storyboard in Resources */,
 				5EEA19D71F752A04004A4A25 /* Assets.xcassets in Resources */,
-				5EEA19D21F752A04004A4A25 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,9 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EEA19CF1F752A04004A4A25 /* ViewController.m in Sources */,
 				5EEA19D51F752A04004A4A25 /* MusicBoxer.xcdatamodeld in Sources */,
+				5E5310361F78EC4000651D3B /* MBTabBarViewController.m in Sources */,
 				5EEA19DD1F752A04004A4A25 /* main.m in Sources */,
+				5E53103C1F78F00300651D3B /* MBsecondViewController.m in Sources */,
+				5E5310391F78EFED00651D3B /* MBfirstViewController.m in Sources */,
 				5EEA19CC1F752A04004A4A25 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,14 +331,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5EEA19D01F752A04004A4A25 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5EEA19D11F752A04004A4A25 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5EEA19D81F752A04004A4A25 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
