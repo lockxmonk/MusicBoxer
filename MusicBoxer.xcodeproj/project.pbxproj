@@ -17,6 +17,7 @@
 		5EEA19DD1F752A04004A4A25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA19DC1F752A04004A4A25 /* main.m */; };
 		5EEA19E71F752A04004A4A25 /* MusicBoxerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA19E61F752A04004A4A25 /* MusicBoxerTests.m */; };
 		5EEA19F21F752A04004A4A25 /* MusicBoxerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA19F11F752A04004A4A25 /* MusicBoxerUITests.m */; };
+		6FC726C5D5A5FBFE95AC84DF /* Pods_MusicBoxer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452BE9875BF783FFC2FD3963 /* Pods_MusicBoxer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		452BE9875BF783FFC2FD3963 /* Pods_MusicBoxer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicBoxer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5310341F78EC4000651D3B /* MBTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBTabBarViewController.h; sourceTree = "<group>"; };
 		5E5310351F78EC4000651D3B /* MBTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBTabBarViewController.m; sourceTree = "<group>"; };
 		5E5310371F78EFED00651D3B /* MBfirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBfirstViewController.h; sourceTree = "<group>"; };
@@ -57,6 +59,8 @@
 		5EEA19ED1F752A04004A4A25 /* MusicBoxerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicBoxerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EEA19F11F752A04004A4A25 /* MusicBoxerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicBoxerUITests.m; sourceTree = "<group>"; };
 		5EEA19F31F752A04004A4A25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A90F8516B344FB0B83AB82C /* Pods-MusicBoxer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicBoxer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicBoxer/Pods-MusicBoxer.debug.xcconfig"; sourceTree = "<group>"; };
+		F971B3C4A395A124EABB804D /* Pods-MusicBoxer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicBoxer.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicBoxer/Pods-MusicBoxer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FC726C5D5A5FBFE95AC84DF /* Pods_MusicBoxer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +116,8 @@
 				5EEA19E51F752A04004A4A25 /* MusicBoxerTests */,
 				5EEA19F01F752A04004A4A25 /* MusicBoxerUITests */,
 				5EEA19C81F752A04004A4A25 /* Products */,
+				EB70A4DD8930D3AB3CFDDB25 /* Pods */,
+				B0C4C100920C6FF842F5F433 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,6 +165,23 @@
 			path = MusicBoxerUITests;
 			sourceTree = "<group>";
 		};
+		B0C4C100920C6FF842F5F433 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				452BE9875BF783FFC2FD3963 /* Pods_MusicBoxer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB70A4DD8930D3AB3CFDDB25 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A90F8516B344FB0B83AB82C /* Pods-MusicBoxer.debug.xcconfig */,
+				F971B3C4A395A124EABB804D /* Pods-MusicBoxer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,9 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EEA19F61F752A04004A4A25 /* Build configuration list for PBXNativeTarget "MusicBoxer" */;
 			buildPhases = (
+				90521B4938275CE1EECA3C28 /* [CP] Check Pods Manifest.lock */,
 				5EEA19C31F752A04004A4A25 /* Sources */,
 				5EEA19C41F752A04004A4A25 /* Frameworks */,
 				5EEA19C51F752A04004A4A25 /* Resources */,
+				71C0D32BE67F231FB4A41266 /* [CP] Embed Pods Frameworks */,
+				C5AD5862E5ED49DC26B2B3BB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -284,6 +311,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		71C0D32BE67F231FB4A41266 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicBoxer/Pods-MusicBoxer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90521B4938275CE1EECA3C28 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C5AD5862E5ED49DC26B2B3BB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicBoxer/Pods-MusicBoxer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5EEA19C31F752A04004A4A25 /* Sources */ = {
@@ -448,6 +523,7 @@
 		};
 		5EEA19F71F752A04004A4A25 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A90F8516B344FB0B83AB82C /* Pods-MusicBoxer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -462,6 +538,7 @@
 		};
 		5EEA19F81F752A04004A4A25 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F971B3C4A395A124EABB804D /* Pods-MusicBoxer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
