@@ -1,12 +1,18 @@
 PODS:
+  - DXPopover (0.1.1)
   - Masonry (1.1.0)
+  - Reveal-SDK (11)
 
 DEPENDENCIES:
+  - DXPopover
   - Masonry
+  - Reveal-SDK
 
 SPEC CHECKSUMS:
+  DXPopover: 13e6bbd1a0da4e62b2190de51f43a94850769e0f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  Reveal-SDK: 7fa13d04bb55db61ff2342a990cf731d5159361d
 
-PODFILE CHECKSUM: 22b763f62efa5dc4f36e41e81e0d45059aca4b8b
+PODFILE CHECKSUM: f25228861fcaedaa958d2ec9b78d6d3c28beecf3
 
 COCOAPODS: 1.2.1
