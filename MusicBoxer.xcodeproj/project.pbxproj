@@ -12,6 +12,7 @@
 		5E53103C1F78F00300651D3B /* MBsecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E53103B1F78F00300651D3B /* MBsecondViewController.m */; };
 		5E62C6FD1F7A486A00A0339F /* MBSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E62C6FC1F7A486A00A0339F /* MBSearchTableViewController.m */; };
 		5E62C7001F7A4FE700A0339F /* MBSearchReacordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E62C6FF1F7A4FE700A0339F /* MBSearchReacordCell.m */; };
+		5EA24D361F7B83AA00A63F8D /* MBSearchHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA24D351F7B83AA00A63F8D /* MBSearchHistoryModel.m */; };
 		5EEA19CC1F752A04004A4A25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA19CB1F752A04004A4A25 /* AppDelegate.m */; };
 		5EEA19D51F752A04004A4A25 /* MusicBoxer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA19D31F752A04004A4A25 /* MusicBoxer.xcdatamodeld */; };
 		5EEA19D71F752A04004A4A25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EEA19D61F752A04004A4A25 /* Assets.xcassets */; };
@@ -52,6 +53,9 @@
 		5E62C6FC1F7A486A00A0339F /* MBSearchTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBSearchTableViewController.m; sourceTree = "<group>"; };
 		5E62C6FE1F7A4FE700A0339F /* MBSearchReacordCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBSearchReacordCell.h; sourceTree = "<group>"; };
 		5E62C6FF1F7A4FE700A0339F /* MBSearchReacordCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBSearchReacordCell.m; sourceTree = "<group>"; };
+		5EA24D321F7B7E4300A63F8D /* cancle_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancle_button@2x.png"; sourceTree = "<group>"; };
+		5EA24D341F7B83AA00A63F8D /* MBSearchHistoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBSearchHistoryModel.h; sourceTree = "<group>"; };
+		5EA24D351F7B83AA00A63F8D /* MBSearchHistoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBSearchHistoryModel.m; sourceTree = "<group>"; };
 		5EEA19C71F752A04004A4A25 /* MusicBoxer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicBoxer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EEA19CA1F752A04004A4A25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5EEA19CB1F752A04004A4A25 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -120,6 +124,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		5EA24D311F7B7E1500A63F8D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5EA24D321F7B7E4300A63F8D /* cancle_button@2x.png */,
+				5E62C6FA1F7A3BFD00A0339F /* MBMasonry-Prefix.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5EA24D331F7B834600A63F8D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5EA24D341F7B83AA00A63F8D /* MBSearchHistoryModel.h */,
+				5EA24D351F7B83AA00A63F8D /* MBSearchHistoryModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5EEA19BE1F752A04004A4A25 = {
 			isa = PBXGroup;
 			children = (
@@ -149,12 +171,13 @@
 				5EEA19CB1F752A04004A4A25 /* AppDelegate.m */,
 				5E5310321F78EB2300651D3B /* Controllers */,
 				5E5310331F78EB2F00651D3B /* Views */,
+				5EA24D331F7B834600A63F8D /* Model */,
 				5EEA19D61F752A04004A4A25 /* Assets.xcassets */,
+				5EA24D311F7B7E1500A63F8D /* Supporting Files */,
 				5EEA19D81F752A04004A4A25 /* LaunchScreen.storyboard */,
 				5EEA19DB1F752A04004A4A25 /* Info.plist */,
 				5EEA19DC1F752A04004A4A25 /* main.m */,
 				5EEA19D31F752A04004A4A25 /* MusicBoxer.xcdatamodeld */,
-				5E62C6FA1F7A3BFD00A0339F /* MBMasonry-Prefix.pch */,
 			);
 			path = MusicBoxer;
 			sourceTree = "<group>";
@@ -377,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EA24D361F7B83AA00A63F8D /* MBSearchHistoryModel.m in Sources */,
 				5EEA19D51F752A04004A4A25 /* MusicBoxer.xcdatamodeld in Sources */,
 				5E5310361F78EC4000651D3B /* MBTabBarViewController.m in Sources */,
 				5EEA19DD1F752A04004A4A25 /* main.m in Sources */,
@@ -542,7 +566,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BK5QPFG5MF;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/MusicBoxer/MBMasonry-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MusicBoxer/Supporting Files/MBMasonry-Prefix.pch";
 				INFOPLIST_FILE = MusicBoxer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hao.MusicBox;
@@ -558,7 +582,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BK5QPFG5MF;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/MusicBoxer/MBMasonry-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MusicBoxer/Supporting Files/MBMasonry-Prefix.pch";
 				INFOPLIST_FILE = MusicBoxer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hao.MusicBox;

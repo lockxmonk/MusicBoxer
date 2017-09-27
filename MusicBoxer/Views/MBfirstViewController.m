@@ -9,12 +9,15 @@
 #import "MBfirstViewController.h"
 #import "DXPopover.h"
 #import "MBSearchReacordCell.h"
+#import "MBSearchHistoryModel.h"
 
 
-@interface MBfirstViewController ()
+@interface MBfirstViewController ()<UISearchBarDelegate>
 
 @property (nonatomic, strong) DXPopover *popover;
 @property (nonatomic, strong) UITableView *tableView;
+
+@property (nonatomic, strong) MBSearchHistoryModel *viewModel;
 
 
 @end
@@ -26,8 +29,10 @@
     
     
     self.title = @"音 乐";
+    _viewModel  = [[MBSearchHistoryModel alloc] init];
     
     
+    [self buildUIElements];    
 
     // Do any additional setup after loading the view.
 }
@@ -45,6 +50,7 @@
     bar.placeholder =@"请输入感兴趣的音乐";
     
     [self.view addSubview:bar];
+    [self.view addSubview:self.tableView];
     
     [bar makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mas_topLayoutGuide);
@@ -64,16 +70,45 @@
     }
     return _tableView;
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//popover 设置
+- (DXPopover *)popover
+{
+    if (_popover == nil)
+    {
+        _popover = [DXPopover popover];
+        _popover.cornerRadius = 0.0;
+        _popover.arrowSize = CGSizeZero;
+        _popover.animationSpring = NO;
+        _popover.maskType = DXPopoverMaskTypeNone;
+        _popover.animationOut = 0.15;
+        _popover.animationIn = 0.15;
+        _popover.applyShadow = NO;
+//        _popover.isNeedtransform = NO;
+//        _popover.blackOverlayInset = UIEdgeInsetsMake(64,0,0,0);
+        _popover.backgroundColor = [UIColor clearColor];
+        
+    }
+    return _popover;
 }
-*/
+
+#pragma mark ---searchBar delegate
+-(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    
+}
+
+#pragma  mark- history records
+
+- (void)showTheHistoryRecords
+{
+    CGPoint startPoint = CGPointMake(CGRectGetWidth(self.view.frame), 64);
+//    [self.popover showAtPoint:startPoint
+//               popoverPostion:DXPopoverPositionDown
+//              withContentView:
+//                       inView:self.view];
+    self.popover.didDismissHandler = ^{
+        
+    };
+}
 
 @end
