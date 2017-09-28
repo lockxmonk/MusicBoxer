@@ -10,6 +10,7 @@
 #import "DXPopover.h"
 #import "MBSearchReacordCell.h"
 #import "MBSearchHistoryModel.h"
+#import "MBSearchTableViewController.h"
 
 
 @interface MBfirstViewController ()<UISearchBarDelegate>
@@ -17,7 +18,10 @@
 @property (nonatomic, strong) DXPopover *popover;
 @property (nonatomic, strong) UITableView *tableView;
 
+@property (nonatomic, strong) UISearchBar *searchBar;
+
 @property (nonatomic, strong) MBSearchHistoryModel *viewModel;
+@property (nonatomic,strong) MBSearchTableViewController *historyViewController;
 
 
 @end
@@ -37,6 +41,8 @@
     // Do any additional setup after loading the view.
 }
 
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -44,15 +50,16 @@
 
 #pragma  mark -- UI
 -(void)buildUIElements{
-    UISearchBar *bar = [[UISearchBar alloc] init];
-    bar.showsCancelButton = NO;
-    bar.tintColor = UIColor.orangeColor;
-    bar.placeholder =@"请输入感兴趣的音乐";
+    _searchBar = [[UISearchBar alloc] init];
+    _searchBar.showsCancelButton = NO;
+    _searchBar.tintColor = UIColor.orangeColor;
+    _searchBar.placeholder =@"请输入感兴趣的音乐";
+    _searchBar.delegate = self;
     
-    [self.view addSubview:bar];
+    [self.view addSubview:_searchBar];
     [self.view addSubview:self.tableView];
     
-    [bar makeConstraints:^(MASConstraintMaker *make) {
+    [_searchBar makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mas_topLayoutGuide);
         make.left.equalTo(self.view);
         make.right.equalTo(self.view);
@@ -69,6 +76,17 @@
         [_tableView registerClass:[MBSearchReacordCell class] forCellReuseIdentifier:@"cell"];
     }
     return _tableView;
+    
+}
+
+- (MBSearchTableViewController *)historyViewController
+{
+    if (_historyViewController == nil)
+    {
+        _historyViewController = [[MBSearchTableViewController alloc] init];
+//        _historyViewController.historyRecords = _historyArray;
+    }
+    return _historyViewController;
 }
 //popover 设置
 - (DXPopover *)popover
@@ -92,23 +110,38 @@
 }
 
 #pragma mark ---searchBar delegate
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [self hiddenTheHistoryRecords];
+    [self.searchBar resignFirstResponder];
+}
 -(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
 {
-    
+    [self hiddenTheHistoryRecords];
+    [self.searchBar resignFirstResponder];
 }
-
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    // when we start to write sth, the record should display to us
+    [self showTheHistoryRecords];
+    [self.searchBar becomeFirstResponder];
+}
 #pragma  mark- history records
 
 - (void)showTheHistoryRecords
 {
-    CGPoint startPoint = CGPointMake(CGRectGetWidth(self.view.frame), 64);
-//    [self.popover showAtPoint:startPoint
-//               popoverPostion:DXPopoverPositionDown
-//              withContentView:
-//                       inView:self.view];
+    CGPoint startPoint = CGPointMake(CGRectGetWidth(self.view.frame), 104);
+    [self.popover showAtPoint:startPoint
+               popoverPostion:DXPopoverPositionDown
+              withContentView:self.historyViewController.view
+                       inView:self.view];
     self.popover.didDismissHandler = ^{
         
     };
 }
 
+- (void)hiddenTheHistoryRecords
+{
+    [self.popover dismiss];
+}
 @end

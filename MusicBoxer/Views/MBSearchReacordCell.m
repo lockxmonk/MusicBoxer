@@ -13,6 +13,7 @@
 @property(nonatomic,strong) UILabel *titleLable;
 @property(nonatomic,strong) UIButton *cancelButton;
 @property(nonatomic,strong) UIView *bottonLine;
+@property (nonatomic) NSInteger row;
 
 @end
 
@@ -63,6 +64,21 @@
 {
     _titleLable.text = title;
     _cancelButton.hidden = YES;
+}
+
+- (void)setItem:(NSString *)title row:(NSInteger)row
+{
+    _row = row;
+    if (row == 0) {
+        _titleLable.text = @"搜索历史";
+        _titleLable.textColor = [UIColor colorWithRed:80/255.0 green:80/255.0 blue:80/255.0 alpha:1];
+        _titleLable.font = [UIFont systemFontOfSize:14.0];
+        _cancelButton.hidden = YES;
+    }else
+    {
+        _titleLable.text = title;
+        _cancelButton.hidden = NO;
+    }
 }
 
 - (void)awakeFromNib {

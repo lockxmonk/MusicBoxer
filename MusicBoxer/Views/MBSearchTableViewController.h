@@ -10,4 +10,6 @@
 
 @interface MBSearchTableViewController : UITableViewController
 
+@property(nonatomic,strong) NSMutableArray *historyRecords;
+
 @end

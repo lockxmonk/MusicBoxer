@@ -10,6 +10,7 @@
 
 @interface MBSearchReacordCell : UITableViewCell
 
+- (void)setItem:(NSString *)title row:(NSInteger)row;
 - (void)setItemWithTitle:(NSString *)title;
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "MBSearchTableViewController.h"
+#import "MBSearchReacordCell.h"
+#import "MBSearchHistoryModel.h"
 
 @interface MBSearchTableViewController ()
 
@@ -16,19 +18,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.backgroundColor = UIColor.whiteColor;
+    [self.tableView registerClass:[MBSearchReacordCell class] forCellReuseIdentifier:@"historyCell"];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    MBSearchHistoryModel *modal = [[MBSearchHistoryModel alloc] init];
+    _historyRecords = modal.dataArray;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
-
+//当popover视图弹出时，dismiss后再点击 需要重新排版这些视图
+- (void)viewWillLayoutSubviews
+{
+    self.tableView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height);
+    [super viewWillLayoutSubviews];
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -36,18 +43,36 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return _historyRecords.count;
 }
 
-/*
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0) {
+        return 40;
+    }
+    return 45;
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *identifier = @"historyCell";
+    MBSearchReacordCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier      forIndexPath:indexPath];
     
-    // Configure the cell...
-    
+    if (cell == nil) {
+        cell = [[MBSearchReacordCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    if (indexPath.row == 0) {
+        [cell setItem:nil row:indexPath.row];
+    }
+    else
+    {
+        [cell setItem:_historyRecords[indexPath.row - 1] row:indexPath.row];
+//        [cell setDelegate:self];
+    }
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
